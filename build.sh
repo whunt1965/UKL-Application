@@ -8,7 +8,7 @@ sudo apt-get -y update
 sudo apt-get -y install git build-essential flex bison supermin libelf-dev libssl-dev texinfo libgmp3-dev libmpc-dev libmpfr-dev qemu-kvm
 
 #Clone UKL repo
-if [ ! -d ./ukl]; then
+if [ ! -d ./ukl ]; then
     git clone git@github.com:jassulan/ukl.git
 fi
 
@@ -16,27 +16,27 @@ fi
 cd ukl/
 
 #Clone and build Linux (if not already cloned)
-if [ ! -d ./linux]; then
+if [ ! -d "./linux" ]; then
     make linux-dir
 fi
 
 #Clone and build GCC (if not already cloned)
-if [ ! -d ./gcc]; then
+if [ ! -d "./gcc" ]; then
     make gcc-dir
 fi
 
 #Clone and build glibc (if not already cloned)
-if [ ! -d ./glibc; then
+if [ ! -d "./glibc" ]; then
     make glibc-dir
 fi
 
 #Clone and build min-initrd (if not already cloned)
-if [ ! -d ./min-initrd]; then
+if [ ! -d "./min-initrd" ]; then
     make min-initrd-dir
 fi
 
 #Create gcc-build (if directory does not exist)
-if [ ! -d ./gcc-build; then
+if [ ! -d "./gcc-build" ]; then
     make min-initrd-dir
 fi
 
