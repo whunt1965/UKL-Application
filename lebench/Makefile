@@ -26,7 +26,7 @@ lebench: undefined_sys_hack.o gcc-build glibc-build
 	gcc -c -o lebench.o lebench.c $(UKL_FLAGS) -UUSE_VMALLOC -UBYPASS -UUSE_MALLOC \
                 -DREF_TEST -DWRITE_TEST -DREAD_TEST -DMMAP_TEST -DMUNMAP_TEST -DPF_TEST -DEPOLL_TEST \
                 -USELECT_TEST -UPOLL_TEST
-	ld -r -o lebench.ukl --allow-multiple-definition $(CRT_STARTS) mybench_small.o \
+	ld -r -o lebench.ukl --allow-multiple-definition $(CRT_STARTS) lebench.o \
                 --start-group --whole-archive  $(PTHREAD_LIB) \
                 $(C_LIB) --no-whole-archive $(SYS_LIBS) --end-group $(CRT_ENDS)
 	ar cr UKL.a lebench.ukl undefined_sys_hack.o

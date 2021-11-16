@@ -37,7 +37,7 @@ fi
 
 #Create gcc-build (if directory does not exist)
 if [ ! -d "./gcc-build" ]; then
-    make min-initrd-dir
+    make gcc-build
 fi
 
 #Make glibc-build
@@ -48,7 +48,7 @@ make undefined_sys_hack.o
 
 #Return to parent directory and copy build files into target directory
 cd ../
-cp -r ukl/undefined_sys_hack.o ukl/gcc-build ukl/glibc-build "$application"
+cp -r ukl/undefined_sys_hack.o ukl/gcc-build ukl/glibc-build ukl/redef_sym_names ./"$application"
 
 #Build Application (produces UKL.a file)
 cd "$application"
