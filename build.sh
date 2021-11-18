@@ -9,7 +9,7 @@ sudo apt-get -y install git build-essential flex bison supermin libelf-dev libss
 
 #Clone UKL repo
 if [ ! -d ./ukl ]; then
-    git clone git@github.com:jassulan/ukl.git
+    git clone --branch ubuntu git@github.com:unikernelLinux/ukl.git
 fi
 
 #Build Linux and Dependencies
