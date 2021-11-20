@@ -7,7 +7,7 @@ application="$1"
 sudo apt-get -y update
 sudo apt-get -y install git build-essential flex bison supermin libelf-dev libssl-dev texinfo libgmp3-dev libmpc-dev libmpfr-dev qemu-kvm
 
-#Clone UKL repo
+#Clone UKL repo (if not already cloned)
 if [ ! -d ./ukl ]; then
 
     #Clone Ubuntu-specific branch of UKL repo
