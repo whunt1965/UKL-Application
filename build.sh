@@ -51,7 +51,7 @@ fi
 #Make undefined sys hack
 make undefined_sys_hack.o
 
-#Return to parent directory and copy build files into target directory
+#Return to parent directory and copy files needed to build UKL.a into target directory
 cd ../
 cp -r ukl/undefined_sys_hack.o ukl/gcc-build ukl/glibc-build ukl/redef_sym_names ./"$application"
 
